@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | WOLF Leather Goods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <a href="/index.html" class="logo"><img src="images/logo.png" alt="WOLF Logo" style="height: 38px; vertical-align: middle;"></a>
+      <nav class="main-nav">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/capabilities.html">Capabilities</a>
+        <a href="/private-label.html">Private Label</a>
+        <a href="/portfolio.html" class="active">Portfolio</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-header content-section" style="background: var(--color-dark-bg);">
+      <div class="container">
+        <h1>Our Portfolio</h1>
+        <p>Explore a selection of our finest leather goods, crafted for brands and clients worldwide. Click any image to view larger.</p>
+      </div>
+    </section>
+    <section class="portfolio-gallery-section content-section" style="background: var(--color-light-bg); text-align: center;">
+      <div class="container">
+        <div class="portfolio-gallery" style="justify-content: center;">
+          <img src="images/portfolio/1.jpg" alt="Portfolio Image 1">
+          <img src="images/portfolio/2.jpg" alt="Portfolio Image 2">
+          <img src="images/portfolio/3.jpg" alt="Portfolio Image 3">
+          <img src="images/portfolio/4.jpg" alt="Portfolio Image 4">
+          <img src="images/portfolio/5.jpg" alt="Portfolio Image 5">
+          <img src="images/portfolio/11.png" alt="Portfolio Image 11">
+          <img src="images/portfolio/12.png" alt="Portfolio Image 12">
+          <img src="images/portfolio/13.jpg" alt="Portfolio Image 13">
+          <img src="images/portfolio/14.jpg" alt="Portfolio Image 14">
+        </div>
+      </div>
+    </section>
+    <section class="content-section" style="background: var(--color-accent); text-align: center; color: var(--color-dark-bg); margin-top: 3rem;">
+      <div class="container">
+        <h2 style="color: var(--color-dark-bg);">What Our Clients Say</h2>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2.5rem;">
+          <blockquote style="background: #fff; color: #222; border-radius: 8px; padding: 2rem 1.5rem; max-width: 340px; min-width: 260px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); font-style: italic; margin: 0;">
+            "WOLF's portfolio speaks for itself. The quality and variety are impressive."
+            <footer style="margin-top: 1rem; color: var(--color-accent); font-style: normal; font-size: 1rem;">— Hannah Müller, Retail Buyer</footer>
+          </blockquote>
+          <blockquote style="background: #fff; color: #222; border-radius: 8px; padding: 2rem 1.5rem; max-width: 340px; min-width: 260px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); font-style: italic; margin: 0;">
+            "We found the perfect products for our store thanks to WOLF's team."
+            <footer style="margin-top: 1rem; color: var(--color-accent); font-style: normal; font-size: 1rem;">— Tomás Silva, Store Owner</footer>
+          </blockquote>
+          <blockquote style="background: #fff; color: #222; border-radius: 8px; padding: 2rem 1.5rem; max-width: 340px; min-width: 260px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); font-style: italic; margin: 0;">
+            "The craftsmanship and attention to detail in every piece is outstanding."
+            <footer style="margin-top: 1rem; color: var(--color-accent); font-style: normal; font-size: 1rem;">— Chloe Martin, Boutique Owner</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-brand">
+        <a href="/index.html" class="logo"><img src="images/logo.png" alt="WOLF Logo" style="height: 38px; vertical-align: middle;"></a>
+        <div class="footer-desc">
+          Premium B2B leather goods manufacturing. Crafted with passion, delivered with precision. Serving brands worldwide with quality and care.
+        </div>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="private-label.html">Private Label</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <div>Street 12, opposite Al-Raee hospital,<br>Jinnah Road, Gujranwala, Pakistan</div>
+        <div><a href="tel:+923114067485">+92 311 4067485</a></div>
+        <div><a href="mailto:wolfonglobe@gmail.com">wolfonglobe@gmail.com</a></div>
+      </div>
+    </div>
+    <p class="copyright">&copy; 2024 WOLF Manufacturing. All Rights Reserved.</p>
+  </footer>
+  <div id="portfolio-lightbox">
+    <button id="portfolio-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="Portfolio Large View">
+  </div>
+</body>
+<script>
+  // Portfolio lightbox logic
+  const gallery = document.querySelector('.portfolio-gallery');
+  const lightbox = document.getElementById('portfolio-lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const lightboxClose = document.getElementById('portfolio-lightbox-close');
+  if (gallery && lightbox && lightboxImg && lightboxClose) {
+    gallery.addEventListener('click', e => {
+      if (e.target.tagName === 'IMG') {
+        lightboxImg.src = e.target.src;
+        lightbox.classList.add('active');
+      }
+    });
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    });
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      }
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      }
+    });
+  }
+</script>
+</html> 
