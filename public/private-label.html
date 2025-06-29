@@ -19,6 +19,11 @@
                 <a href="/portfolio.html">Portfolio</a>
                 <a href="/contact.html">Contact</a>
             </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
         </div>
     </header>
     <main>
@@ -163,5 +168,34 @@
         </div>
         <p class="copyright">&copy; 2024 WOLF Manufacturing. All Rights Reserved.</p>
     </footer>
+    <script>
+        // Mobile menu functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        if (mobileMenuToggle && mainNav) {
+            mobileMenuToggle.addEventListener('click', function() {
+                mobileMenuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            });
+
+            // Close menu when clicking on a link
+            const navLinks = mainNav.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenuToggle.contains(event.target) && !mainNav.contains(event.target)) {
+                    mobileMenuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                }
+            });
+        }
+    </script>
 </body>
 </html> 
