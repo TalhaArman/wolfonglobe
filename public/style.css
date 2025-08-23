@@ -329,7 +329,7 @@ a {
 .main-footer {
     background: #181818;
     padding: 4rem 0 2rem 0;
-    text-align: left;
+    text-align: center;
     color: var(--color-secondary-text);
     border-top: 1px solid #232323;
 }
@@ -361,7 +361,7 @@ a {
     font-size: 1rem;
     color: var(--color-secondary-text);
     max-width: 320px;
-    text-align: left; /* Desktop: left-aligned */
+    text-align: center /* Desktop: left-aligned */
 }
 
 .footer-nav {
@@ -1014,7 +1014,7 @@ a {
     }
     
     .hero {
-        height: 90vh; /* Increased from 80vh */
+     height: 90vh; /* Increased from 80vh */
         padding: 0 1rem;
         padding-top: 2rem;
     }
