@@ -1013,7 +1013,7 @@ a {
     }
     
     .hero {
-        height: 80vh;
+        height: 90vh; /* Increased from 80vh */
         padding: 0 1rem;
         padding-top: 2rem;
     }
@@ -1150,7 +1150,7 @@ a {
     }
     
     .hero {
-        height: 70vh;
+        height: 85vh; /* Increased from 70vh */
         padding-top: 2rem;
     }
     
@@ -1223,7 +1223,7 @@ a {
     }
     
     .hero {
-        height: 60vh;
+        height: 80vh; /* Increased from 60vh */
         padding: 0 0.5rem;
         padding-top: 2rem;
     }
@@ -1319,6 +1319,11 @@ a {
 
 /* Small Phones */
 @media (max-width: 480px) {
+    .hero {
+        height: 75vh; /* Increased from default */
+        padding-top: 1.5rem;
+    }
+    
     .hero h1 {
         font-size: 1.5rem;
     }
@@ -1405,6 +1410,11 @@ a {
 
 /* Extra Small Phones */
 @media (max-width: 360px) {
+    .hero {
+        height: 70vh; /* Increased from default */
+        padding-top: 1rem;
+    }
+    
     .hero h1 {
         font-size: 1.3rem;
     }
