@@ -361,6 +361,7 @@ a {
     font-size: 1rem;
     color: var(--color-secondary-text);
     max-width: 320px;
+    text-align: left; /* Desktop: left-aligned */
 }
 
 .footer-nav {
@@ -1126,6 +1127,12 @@ a {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+    }
+    
+    /* Mobile: Center the footer description */
+    .footer-desc {
+        text-align: center;
+        margin: 0 auto;
     }
     
     .content-section,
